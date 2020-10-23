@@ -126,4 +126,4 @@ LOGOUT_REDIRECT_URL  =  "/"
 STATIC_URL = '/static/'
  
 UPLOADED_URL = '/pic_folder/booksapp/'
-UPLOADED_FOLDER = '/home/mahdi/books/pic_folder/booksapp/'#os.path.join(BASE_DIR , UPLOADED_URL)
+UPLOADED_FOLDER = '/home/mahdiahmadi/workspace/django-test/7xr-t1/pic_folder/booksapp'#os.path.join(BASE_DIR , UPLOADED_URL)
