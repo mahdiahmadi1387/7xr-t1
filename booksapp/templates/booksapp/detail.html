@@ -1,0 +1,56 @@
+{% extends "booksapp/base.html" %}
+{% load static %}
+{% block title %}{{book.name}}{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'booksapp/detail.css' %}"12>
+    {% endblock %}
+{% block body %}
+        <table>
+            <tr>
+                <td>
+                    <table style="height: 100%;">
+                        <tr>
+                            <td><p>شماره ی کتاب: {{book.number}}</p></td>
+                        </tr>
+                        <tr>
+                            <td><p> نام کتاب: {{book.name}}</p></td>
+                        </tr>
+                        <tr>
+                            <td><p>نویسنده کتاب: {{book.author}}</p></td>
+                        </tr>
+                        <tr>
+                            <td><p>موضوع کتاب: {{book.topic.name}}</p></td>
+                        </tr>
+                        <tr>
+                            <td><p>تعداد صفحات کتاب: {{book.page_count}}</p></td>
+                        </tr>
+                        <tr>
+                            <td><p>مناسب برای رده سنی {{book.ages.name}}</p></td>            
+                        </tr>
+                    </table>
+                </td>
+                <td style="width: 80%;"><img src="{{book.image.url}}" style="width: 100%;"></td>
+            </tr>
+        </table>
+        {% for comment in comments %}
+        <div class="comment">
+          <p class="info">
+            Comment {{ forloop.counter }} by {{ comment.name }}
+            {{ comment.created }}
+          </p>
+          {{ comment.body|linebreaks }}
+        </div>
+      {% empty %}
+        <p>There are no comments yet.</p>
+      {% endfor %}
+      {% if new_comment %}
+        <h2>Your comment has been added.</h2>
+      {% else %}
+        <h2>Add a new comment</h2>
+        <form method="post">
+          {{ comment_form.as_p }}
+          {% csrf_token %}
+          <p><input type="submit" value="Add comment"></p>
+        </form>
+      {% endif %}
+            {% endblock %}

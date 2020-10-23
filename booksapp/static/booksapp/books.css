@@ -1,0 +1,31 @@
+body{
+    /* background-color: #dd4814; */
+    background-image: url('ubuntu.svg');
+    background-position-x: center;
+    /* background-size: 633px; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Chilanka,homa;
+    font-size: 25px;
+    direction: rtl;
+}
+table, th, td {
+            background-color: #ffffff1e;
+            border: 5px solid rgba(255, 255, 0, 0.5);
+            border-collapse: collapse;
+            color: blue;
+            }
+th, td {
+    padding: 5px;
+    }
+table{
+    text-align: center;
+}   
+a,a:hover,a:visited{
+
+    text-decoration:none
+}    
+img{
+    width: 100px;
+}

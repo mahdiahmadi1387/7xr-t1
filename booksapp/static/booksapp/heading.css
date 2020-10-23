@@ -1,0 +1,25 @@
+body{
+    
+    color:black;
+    font-size: 25px;
+
+    direction: rtl;
+    font-family: Chilanka,homa;
+
+}
+table, th, td {
+            background-color: #ffffff1e;
+            border: 5px solid rgba(255, 255, 0, 0.5);
+            border-collapse: collapse;
+            color: blue;
+            }
+th, td {
+        padding: 5px;
+}
+table{
+        text-align: center;
+}   
+a,a:hover,a:visited{
+    color: black;
+    text-decoration:none
+}    

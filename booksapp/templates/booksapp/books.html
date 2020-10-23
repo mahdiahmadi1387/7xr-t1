@@ -1,0 +1,38 @@
+{% extends "booksapp/base.html" %}
+
+{% load static %}
+
+
+{% block title %}home{% endblock %}
+
+    {% block head %} 
+    <link rel="stylesheet" href="{% static 'booksapp/books.css' %}">
+    {% endblock %}
+
+
+{% block body %}
+    <table style="width:100%">
+        <tr>
+            <th style="color:black;">شماره</th>
+            <th><a style="color:black;" href="/name/">نام</a></th>
+            <th><a style="color:black;" href="/author/">نویسنده</a></th>
+            <th><a style="color:black;" href="/topic/">موضوع</a></th>
+            <th style="color:black;">تعداد صفحات</th>
+            <th><a style="color:black;" href="/ages/">رده سنی</a></th>
+            <th style="color:black;">عکس</th>
+        </tr>
+        {% for book in books %} 
+
+        <tr>
+                <td>{{book.number}}</td>
+                <td><a href="{% url 'booksapp:detail' slug_detail=book.number %}"  style="color: blue;">{{book.name}}</a></td>
+                <td>{{book.author}}</td>
+                <td>{{book.topic.name}}</td>
+                <td>{{book.page_count}}</td>
+                <td>{{book.ages.name}}</td>
+                <td><img src="{{book.image.url}}" alt=""></td>
+        </tr>
+        {% endfor %}
+
+    </table>
+{% endblock %}

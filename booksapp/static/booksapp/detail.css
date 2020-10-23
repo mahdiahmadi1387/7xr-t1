@@ -1,0 +1,26 @@
+body{
+
+    color: black;
+    font-family: Chilanka,homa;
+    font-size: 19.5px;
+    direction: rtl;
+}
+a,a:hover,a:visited{
+    color: blue;
+    text-decoration:none
+}
+
+
+table, th, td {
+    background-color: #ffffff1e;
+    border: 5px solid rgba(255, 255, 0, 0.5);
+    border-collapse: collapse;
+    color: blue;
+    }
+th, td {
+padding: 5px;
+}
+table{
+text-align: center;
+}   
+/* background-color: #dd4814; */

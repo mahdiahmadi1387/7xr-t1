@@ -1,0 +1,13 @@
+{% extends "booksapp/base.html" %}
+{% load static %}
+{% block title %}author{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'booksapp/heading.css' %}">
+    {% endblock %}
+{% block body %}
+    {% for author in authors %}
+    
+        <p><a href="/author/{{author}}">{{author}}</a></p>
+    
+    {% endfor %}
+{% endblock %}

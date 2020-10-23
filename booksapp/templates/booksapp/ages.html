@@ -1,0 +1,17 @@
+{% extends "booksapp/base.html" %}
+
+{% load static %}
+
+
+{% block title %} ages {% endblock %}
+
+{% block head %} 
+<link rel="stylesheet" href="{% static 'booksapp/heading.css' %}"> {% endblock %}
+{% block body %} 
+
+{% for age in agess %}
+
+<p><a href="/ages/{{age}}">{{age}}</a></p>
+
+{% endfor %}
+{% endblock %}
