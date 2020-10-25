@@ -14,7 +14,7 @@ urlpatterns = [
     path('author/',views.author),
     path('topic/',views.topic),
     path('ages/',views.ages),
-    path('<slug_detail>',views.app_detail,name="detail"),
+    path('<slug_detail>/',views.app_detail,name="detail"),
     path('author/<slug_author>',views.author_detail,name="detail_author"),
     path('topic/<slug_topic>',views.topic_detail,name="detail_topic"),
     path('ages/<slug_ages>',views.ages_detail,name="detail_ages"),
